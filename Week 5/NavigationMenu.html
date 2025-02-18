@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="menuContainer"></div>
+
+    <script>
+
+//Create an array that will hold your menu items.
+//Create at least five menu item arrays to store in your first array.
+//Have at least two values per array index of that first array
+        let menuItems = [
+            { url: "index.html", display: "Home" },
+            { url: "services.html", display: "Services" },
+            { url: "about.html", display: "About Us" },
+            { url: "contact.html", display: "Contact" },
+            { url: "careers.html", display: "Careers" },
+        ];
+
+    let menuContainer = document.getElementById("menuContainer");
+
+
+    //Use a loop to display this menu. 
+    for (let i = 0; i < menuItems.length; i++) {
+        let menuItem = menuItems[i]; //This line gets the current menu item object.
+        let menuItemDiv = document.createElement("div"); //This line creates a new <div> element to represent the menu item.
+        let link = document.createElement("a"); //This line creates a new <a> element for the menu item's link.
+        link.href = menuItem.url; //This line sets the href attribute of the <a> element to the URL of the menu item.
+        link.textContent = menuItem.display; //This line sets the text content of the <a> element to the display text of the menu item.
+        menuItemDiv.appendChild(link); //This line of code adds the <a> element to the <div> representing the menu item.
+        menuContainer.appendChild(menuItemDiv); //This line adds the <div> representing the menu item to the menu container <div>
+    }
+
+    </script>
+
+</body>
+</html>
