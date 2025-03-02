@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Recommendations</title>
+</head>
+<body>
+    <h1>Welcome! Fill out the form below to find your perfect recipe!</h1>
+
+    <form id="recipeForm" action="" method="get">
+        <div class="formField">
+            <label for="dish">What would you like to make?</label>
+            <input type="text" id="dish" name="dish">
+        </div>
+
+        <div class="formField">
+            <label for="servings">Servings:</label>
+            <input type="number" id="servings" name="quantity" min="1" max="100" step="1">
+        </div>  <br>
+        
+        <!-- Checkbox -->
+        <div class="formField">
+            <label>Check here for preferred dietary preferences: </label><br>
+
+            <input type="checkbox" id="vegetarian" name="vegetarian">
+            <label for="vegetarian">Vegetarian</label><br>
+
+            <input type="checkbox" id="vegan" name="vegan">
+            <label for="vegan">Vegan</label><br>
+
+            <input type="checkbox" id="gf" name="gf">
+            <label for="gf">Gluten-Free</label><br>
+        </div> <br>
+
+        <!-- Radio Button -->
+        <div class="formField">
+            <label>Difficulty: </label><br>
+
+            <input type="radio" id="easy" name="easy" value="easy"> 
+            <label for="easy">Easy</label><br>
+
+            <input type="radio" id="intermediate" name="intermediate" value="intermediate"> 
+            <label for="intermediate">Intermediate</label><br>
+
+            <input type="radio" id="difficult" name="difficult" value="difficult"> 
+            <label for="difficult">Difficult</label><br>
+        </div> <br>
+
+        <!-- Dropdown -->
+        <div class="formField">
+            <label for="cuisineType">Select cuisine type:</label>
+            <select id="cuisineType" name="cuisineType">
+                <option value="select one..." selected>Select one...</option>
+                <option value="italian">Italian</option>
+                <option value="mexican">Mexican</option>
+                <option value="asian">Asian</option>
+            </select>
+        </div> <br>
+
+        <div class="formField">
+            <label for="additional">Specific Ingredients Available:</label><br>
+            <textarea id="additional" name="additional"></textarea>
+        </div>
+
+        <button type="submit" onclick="displayMessage()">Find Recipe</button>
+
+        <script>
+            function displayMessage() {
+                alert("Click here to open results.");
+            }
+        </script>
+
+    </form>
+</body>
+</html>
