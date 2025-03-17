@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Array Practice</title>
+</head>
+<body>
+
+<div id="sortedArrayDisplay"></div>
+
+<script>
+var myArray = ["D", "F", "C"];
+
+myArray.push("B", "E", "A");
+
+myArray.splice(2, 1);
+
+myArray.sort();
+
+
+var newArray = myArray.slice(0); 
+
+function displaySortedArray() {
+    var sortedArrayDisplayElement = document.getElementById("sortedArrayDisplay");
+    var sortedArrayContent = "<p>Sorted Array Contents:</p><ul>";
+
+   
+    for (var i = 0; i < myArray.length; i++) {
+        sortedArrayContent += "<li>" + myArray[i] + "</li>";
+    }
+
+    sortedArrayContent += "</ul>";
+
+    sortedArrayDisplayElement.innerHTML = sortedArrayContent;
+
+
+  sortedArrayDisplayElement.innerHTML += "<p>Second Item: " + newArray[1] + "</p>";
+
+}
+
+displaySortedArray();
+</script>
+
+</body>
+</html>
